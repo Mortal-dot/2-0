@@ -1,0 +1,1023 @@
+
+/* Navbar izquierda y derecha */
+.navbar-left,
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    position: relative; /* Agregado para posicionar el dropdown relativo al li */
+    list-style-type: none; /* Elimina los puntos */
+}
+
+/* Estilo para los enlaces */
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f0db4f; /* Color amarillo en hover */
+}
+
+/* Estilos para el elemento central */
+.navbar-center {
+    background-color: #000;
+    padding: 25px 15px;
+}
+
+.navbar-center a {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px 0;
+    list-style: none;
+    top: 100%; /* Mantiene el dropdown justo debajo del enlace */
+    left: 0; /* Alineación a la izquierda del li */
+    width: max-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li h4 {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1.1em; /* Tamaño de fuente para los subtítulos */
+    color: #333; /* Color del texto */
+}
+
+.dropdown li p {
+    margin: 5px 0 10px; /* Espaciado alrededor de los párrafos */
+    font-size: 0.9em; /* Tamaño de fuente para los párrafos */
+    color: #555; /* Color del texto */
+}
+
+
+.dropdown-img {
+    width: 500px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 10px auto; /* Centramos la imagen */
+    display: block; /* Aseguramos que la imagen se muestre en una nueva línea */
+}
+
+.dropdown a {
+    color: #000000;
+    padding: 5px 15px;
+    white-space: nowrap;
+    display: block;
+    text-decoration: none;
+}
+
+/* Mostrar el menú desplegable en hover */
+.navbar-left li:hover .dropdown,
+.navbar-right li:hover .dropdown {
+    display: block;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 60px; /* Para que la galería no quede debajo del header */
+}
+
+.gallery-item {
+    position: relative;
+    width: 33.33%;
+    height: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto de zoom en hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay para el texto */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px;
+}
+
+.overlay h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1em;
+    margin-top: 10px;
+    line-height: 1.4;
+    max-width: 80%;
+    color: #e0e0e0; /* Color más claro para diferenciar del título */
+}
+
+/* Mostrar overlay en hover */
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-section {
+    margin: 10px;
+    width: 30%;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Color amarillo */
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* Hace que los iconos sean blancos */
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer inferior */
+.footer-bottom {
+    background-color: #111;
+    padding: 10px;
+    color: #aaa;
+    font-size: 0.8em;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+    
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 80px; /* Asegúrate de que la galería no se superponga al header */
+    }
+
+    /* Otros estilos existentes */
+    header {
+        padding: 10px 5px; /* Reduce el padding en móviles */
+    }
+
+    .navbar {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        padding: 10px; /* Reduce el padding */
+        text-align: center; /* Centra el texto dentro del navbar */
+    }
+
+    .navbar-left, .navbar-right {
+        flex-direction: column; /* Cambia la dirección a columna */
+        gap: 10px; /* Reduce el espacio entre los enlaces */
+        width: 100%; /* Asegura que ocupen todo el ancho */
+    }
+
+    .navbar-left a, .navbar-right a {
+        width: 100%; /* Cada enlace ocupa el 100% del ancho disponible */
+        text-align: center; /* Centra el texto de los enlaces */
+    }
+
+    .navbar-center {
+        padding: 15px 10px; /* Reduce el padding */
+        text-align: center; /* Centra el texto */
+    }
+
+    .gallery-item {
+        width: 100%; /* Cada galería ocupa el 100% en móviles */
+        height: auto; /* Altura automática para mantener proporción */
+    }
+
+    .footer-section {
+        width: 100%; /* Hace que las secciones del footer ocupen el 100% */
+        margin-bottom: 20px; /* Añade espacio entre las secciones */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra las secciones */
+    }
+
+    .social-icons {
+        flex-direction: row; /* Alinea iconos en fila */
+        gap: 10px; /* Espacio más pequeño entre iconos */
+    }
+
+    .dropdown-img {
+        width: 100%; /* Ajusta el tamaño de la imagen */
+    }
+
+    .overlay h2 {
+        font-size: 1.2em; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .overlay p {
+        font-size: 0.9em; /* Tamaño de fuente más pequeño para móviles */
+    }
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos para el contenedor principal */
+.principal {
+    padding-top: 25px; /* Añadimos espacio para el encabezado fijo */
+}
+
+
+
+
+
+
+
+/* Estilos del navbar */
+.navbar {
+    position: fixed; /* Lo fijamos en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    background-color: #a74444; /* Fondo oscuro para el navbar */
+    padding: 10px 0;
+    z-index: 1000; /* Para asegurarnos de que esté por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave debajo del navbar */
+}
+
+
+
+
+
+
+/* Estilos para los elementos del menú */
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos en la barra */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Hace que el contenedor de los enlaces ocupe todo el ancho */
+}
+
+.navbar nav ul li {
+    margin: 0 15px; /* Espaciado entre los elementos del menú */
+}
+
+.navbar nav ul li a {
+    text-decoration: none; /* Eliminamos el subrayado */
+    color: white; /* Color del texto blanco */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: 500; /* Un poco de negrita */
+    transition: color 0.3s ease; /* Transición suave al pasar el cursor */
+}
+
+/* Efecto hover para los enlaces del menú */
+.navbar nav ul li a:hover {
+    color: #ff6347; /* Un color suave para cuando se pasa el cursor */
+}
+
+/* Estilos para las pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar nav ul {
+        flex-direction: column; /* El menú se vuelve vertical en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0; /* Espaciado vertical */
+    }
+
+    .navbar nav ul li a {
+        font-size: 16px; /* Reducir el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+
+/* Estilo general para el navbar */
+.navbar {
+    position: fixed;  /* Fijo en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;  /* Asegura que ocupe todo el ancho */
+    background-color: #a74444;  /* Color de fondo */
+    padding: 10px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+/* Estilo para la lista de navegación */
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;  /* Centra los elementos horizontalmente */
+    align-items: center;  /* Centra los elementos verticalmente */
+    padding: 0;
+    margin: 0;
+    width: 100%;  /* Ocupa todo el ancho */
+}
+
+/* Estilo para cada item en la lista */
+.navbar nav ul li {
+    margin: 0 20px;  /* Espaciado entre los elementos */
+}
+
+/* Estilo general para los enlaces */
+.navbar nav ul li a {
+    text-decoration: none;  /* Sin subrayado */
+    color: white;  /* Color de texto blanco */
+    font-size: 18px;  /* Tamaño de la fuente */
+    font-weight: 500;  /* Negrita */
+    transition: color 0.3s ease;  /* Transición suave para el hover */
+}
+
+/* Efecto hover en los enlaces */
+.navbar nav ul li a:hover {
+    color: #ff6347;  /* Cambio de color al pasar el cursor */
+}
+
+/* Estilo especial para el enlace 'Sobre Mí' */
+.navbar nav ul .special-link a {
+    background-color: #000000;  /* Fondo color distintivo */
+    padding: 8px 16px;  /* Relleno alrededor del texto */
+    border-radius: 8px;  /* Bordes redondeados */
+    font-weight: bold;  /* Texto en negrita */
+    color: white;  /* Color del texto */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);  /* Sombra suave para resaltar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Efecto de transformación y sombra */
+}
+
+/* Efecto hover para el enlace especial 'Sobre Mí' */
+.navbar nav ul .special-link a:hover {
+    transform: scale(1.05);  /* Efecto de zoom al pasar el cursor */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  /* Sombra más pronunciada */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar nav ul {
+        flex-direction: column;  /* Organizar los enlaces en columna */
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;  /* Espaciado vertical en pantallas pequeñas */
+    }
+
+    .navbar nav ul .special-link a {
+        font-size: 16px;  /* Ajustar el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+
+
+
+
+/* Estilo general para los elementos de la galería */
+.gallery-item {
+    position: relative;  /* Necesario para posicionar los elementos hijos de forma absoluta */
+    display: block;
+}
+
+
+
+
+/* Estilo de cada icono */
+.social-icon {
+    background-color: transparent; /* Elimino el fondo, ahora es completamente transparente */
+    padding: 6px; /* Reducimos el padding de cada icono */
+    color: #861818; /* Color de los iconos */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Los iconos siguen siendo redondeados */
+}
+
+/* Ajustar el tamaño de los iconos */
+.social-icon i {
+    font-size: 28px; /* Tamaño de los iconos */
+}
+
+/* Estilo cuando el icono está en hover */
+.social-icon:hover {
+    background-color: transparent; /* El fondo sigue transparente al hacer hover */
+    color: #25D366; /* Color verde cuando se pasa el ratón por encima */
+}
+
+/* Estilo del overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Contenedor general de la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ajusta la cantidad de columnas según el diseño */
+    gap: 15px; /* Espacio entre los elementos */
+}
+
+/* Contenedor para cada imagen */
+.gallery-item {
+    position: relative; /* Necesario para posicionar los iconos sobre la imagen */
+    overflow: hidden; /* Asegura que los elementos dentro de la imagen no se salgan del contenedor */
+}
+
+/* Contenedor para los iconos sobre la imagen */
+.social-icons {
+    position: absolute; /* Colocamos los iconos de forma absoluta sobre la imagen */
+    top: 10px; /* Ajusta la distancia desde la parte superior de la imagen (encima) */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Alineación perfecta al centro */
+    z-index: 2; /* Asegura que los iconos estén encima de la imagen */
+    display: flex;
+    gap: 10px; /* Espacio entre los iconos */
+}
+
+
+
+
+
+/* Estilo de cada icono */
+.social-icon {
+    background-color: transparent; /* Elimino el fondo, ahora es completamente transparente */
+    padding: 6px; /* Reducimos el padding de cada icono */
+    color: #861818; /* Color de los iconos */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Los iconos siguen siendo redondeados */
+}
+
+/* Ajustar el tamaño de los iconos */
+.social-icon i {
+    font-size: 28px; /* Tamaño de los iconos */
+}
+
+/* Estilo cuando el icono está en hover */
+.social-icon:hover {
+    background-color: transparent; /* El fondo sigue transparente al hacer hover */
+    color: #25D366; /* Color verde cuando se pasa el ratón por encima */
+}
+
+/* Estilo del overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Contenedor para los iconos sobre la imagen */
+.social-icons {
+    position: absolute;
+    top: 90%; /* Ajusta el valor de 'top' para mover los iconos hacia abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Asegura que los iconos estén encima de la imagen */
+    display: flex;
+    gap: 10px; /* Espacio entre los iconos */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Asegura que las imágenes cubran todo el espacio y se expandan correctamente */
+.gallery-item img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+/* Estilo del contenedor de cada imagen */
+.gallery-item {
+    position: relative; /* Necesario para posicionar los iconos y el overlay */
+    display: inline-block; /* Asegura que las imágenes estén en línea */
+    width: 100%; /* El contenedor toma todo el espacio disponible */
+    height: 400px; /* Ajusta esta altura según lo que necesites para la imagen */
+}
+
+/* Contenedor para los iconos, para que se ubiquen sobre la imagen */
+.social-icons {
+    position: absolute;
+    top: 10px; /* Ajusta según sea necesario para que los iconos no queden fuera de la imagen */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Asegura que los iconos estén encima de la imagen */
+    display: flex;
+    gap: 10px; /* Espacio entre los iconos */
+}
+
+/* Estilo de cada icono */
+.social-icon {
+    background-color: transparent; /* Elimino el fondo, ahora es completamente transparente */
+    padding: 6px; /* Reducimos el padding de cada icono */
+    color: #861818; /* Color de los iconos */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Los iconos siguen siendo redondeados */
+}
+
+/* Ajustar el tamaño de los iconos */
+.social-icon i {
+    font-size: 28px; /* Tamaño de los iconos */
+}
+
+/* Estilo cuando el icono está en hover */
+.social-icon:hover {
+    background-color: transparent; /* El fondo sigue transparente al hacer hover */
+    color: #25D366; /* Color verde cuando se pasa el ratón por encima */
+}
+
+/* Estilo del overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilo de cada icono */
+.social-icon {
+    background-color: transparent; /* Elimino el fondo, ahora es completamente transparente */
+    padding: 6px; /* Reducimos el padding de cada icono */
+    color: #861818; /* Color de los iconos */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Los iconos siguen siendo redondeados */
+}
+
+/* Ajustar el tamaño de los iconos */
+.social-icon i {
+    font-size: 28px; /* Tamaño de los iconos */
+}
+
+/* Estilo cuando el icono está en hover */
+.social-icon:hover {
+    background-color: transparent; /* El fondo sigue transparente al hacer hover */
+    color: #25D366; /* Color verde cuando se pasa el ratón por encima */
+}
+
+/* Estilo del overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Mover el contenedor de la imagen y los iconos hacia abajo */
+.gallery-item {
+    position: relative;
+    margin-top: 50px; /* Mueve todo el contenedor hacia abajo, ajusta según sea necesario */
+}
+
+/* Ajuste de los iconos sobre las imágenes */
+.social-icons {
+    position: absolute;
+    top: 80%; /* Ajusta la distancia desde la parte superior de la imagen */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontal */
+    z-index: 2; /* Asegura que los iconos estén encima de la imagen */
+    display: flex;
+    gap: 10px; /* Espacio entre los iconos */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hacer las imágenes completamente responsivas */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Overlay de las imágenes */
+.gallery-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Hacer los iconos sociales flotantes y responsivos */
+.social-icons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.social-icon {
+    margin-left: 10px;
+    color: white;
+    font-size: 24px;
+}
+
+/* Hacer que el footer sea responsivo */
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Restablecer los márgenes y el padding globalmente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración de la fuente */
+body {
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+/* Estilos del encabezado y navegación */
+.navbar {
+    background-color: #007bff;
+    padding: 15px 0;
+}
+
+
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .overlay h2 {
+        font-size: 20px;
+    }
+
+    .overlay p {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .social-icon {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el footer */
+#footer {
+    position: relative; /* Necesario para que las gotas se posicionen sobre el footer */
+    color: #333333; /* Color del texto en gris oscuro */
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7); /* Sombra más pronunciada para dar profundidad */
+    border-radius: 10px; /* Bordes redondeados para un acabado más suave */
+    overflow: hidden; /* Esconde las gotas que se salen del área del footer */
+    display: flex; /* Utiliza Flexbox */
+    flex-direction: column; /* Los elementos se colocan en una columna */
+    justify-content: space-between; /* Distribuye el contenido en el espacio disponible */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: #3c5868; /* Fondo gris oscuro */
+    z-index: 0; /* Para estar por debajo de las gotas de lluvia */
+}
+
+.footer-section {
+    padding: 15px; /* Reduce el padding para hacer el contenedor más pequeño */
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra ligera */
+    border-radius: 0px;
+    background-color: #157979; /* Fondo gris claro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    width: 60%; /* Reduce el ancho para que sea más pequeño */
+    max-width: 800px; /* Máximo ancho reducido */
+    text-align: center; /* Alineación del texto */
+    
+    /* Sombra para dar profundidad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(84, 14, 94, 0.7);
+    
+    /* Sombra de texto para dar un efecto de brillo */
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.footer-section h1, .footer-section p {
+    font-size: 1.5rem; /* Reduce el tamaño de fuente para ajustar al contenedor */
+    font-weight: bold;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Efecto arcoíris */
+    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
+    background-clip: text; /* Asegura que el fondo solo cubra el texto */
+    color: transparent; /* Hace el texto transparente para mostrar el fondo */
+}
+
+/* Si hay varios contenedores, puedes agregar más reglas específicas si es necesario */
+.footer-section .container {
+    width: 100%; /* Asegura que los contenedores ocupen el ancho disponible */
+    margin-bottom: 10px; /* Espaciado entre contenedores */
+}
+
+
+
+
+/* Estilo del pie de página */
+.footer-bottom {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el pie */
+    border-radius: 10px;
+    margin-top: 20px; /* Un pequeño espacio entre el contenido y el pie de página */
+    flex-shrink: 0; /* Asegura que no se reduzca el tamaño */
+    width: 100%; /* Asegura que el pie de página ocupe el 100% del ancho */
+}
+
+/* Efecto de brillo en el pie */
+.footer-bottom p {
+    animation: glowing 2s infinite ease-in-out;
+}
+
+/* Animación de brillo para los colores */
+@keyframes glowing {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.8); /* Aumenta el brillo para simular un metal brillante */
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+
+/* Sombra adicional en los elementos del footer */
+.footer {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); /* Sombra de profundidad */
+    border-radius: 10px;
+}
+
+/* Contenedor de gotas de lluvia */
+.raindrops {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; /* Las gotas no interfieren con el contenido */
+    z-index: 1; /* Coloca las gotas sobre el fondo */
+}
+
+/* Estilo de las gotas de lluvia */
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: #ff0000;  /* Colores metálicos de las gotas de lluvia */
+    opacity: 0.5;
+    animation: rain 1s linear infinite; /* Aseguramos que caigan continuamente */
+}
+
+/* Animación de la lluvia */
+@keyframes rain {
+    to {
+        transform: translateY(100vh); /* Las gotas caen hasta la parte inferior de la pantalla */
+    }
+}
+
+/* Colores metálicos para las gotas de lluvia */
+.raindrop:nth-child(1) { background: #ff0000; }  /* Rojo metálico */
+.raindrop:nth-child(2) { background: #ff7300; }  /* Naranja metálico */
+.raindrop:nth-child(3) { background: #fffb00; }  /* Amarillo metálico */
+.raindrop:nth-child(4) { background: #4eff00; }  /* Verde metálico */
+.raindrop:nth-child(5) { background: #00b2ff; }  /* Azul metálico */
+.raindrop:nth-child(6) { background: #9b00ff; }  /* Morado metálico */
+.raindrop:nth-child(7) { background: #d4af37; }  /* Dorado metálico */
+.raindrop:nth-child(8) { background: #c0c0c0; }  /* Plateado metálico */
+.raindrop:nth-child(9) { background: #b87333; }  /* Cobre metálico */
+.raindrop:nth-child(10) { background: #cd7f32; }  /* Bronce metálico */
+.raindrop:nth-child(11) { background: #50c878; }  /* Esmeralda metálica */
+.raindrop:nth-child(12) { background: #0e4c92; }  /* Zafiro metálico */

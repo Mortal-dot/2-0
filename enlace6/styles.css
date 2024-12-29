@@ -1,0 +1,1461 @@
+/* Reinicio de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo y la galería */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+
+/* Estilo para la sección del vídeo */
+.video-section {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    display: flex; /* Utiliza flexbox para alinear contenido */
+    justify-content: space-between; /* Espacio entre ambos contenidos */
+    padding: 400px 20px;
+}
+
+/* Estilo para la galería */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.gallery-item {
+    width: 30%;
+    margin: 0 10px;
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    overflow: hidden;   /* Opcional: para bordes redondeados */
+    position: relative; /* Necesario para el posicionamiento del texto */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block; /* Elimina espacios debajo de la imagen */
+}
+
+.image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    color: white; /* Color del texto */
+    text-align: center;
+    padding: 5px; /* Espaciado */
+    margin: 0; /* Eliminar márgenes */
+}
+
+
+
+/* Reinicio de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo y la galería */
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Estilos generales del header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    
+}
+
+/* Navbar general */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Navbar izquierda y derecha */
+.navbar-left,
+.navbar-right {
+    display: flex;
+    gap: 20px;
+    position: relative; /* Agregado para posicionar el dropdown relativo al li */
+    list-style-type: none; /* Elimina los puntos */
+}
+
+/* Estilo para los enlaces */
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f0db4f; /* Color amarillo en hover */
+}
+
+/* Estilos para el elemento central */
+.navbar-center {
+    background-color: #000;
+    padding: 25px 15px;
+}
+
+.navbar-center a {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px 0;
+    list-style: none;
+    top: 100%; /* Mantiene el dropdown justo debajo del enlace */
+    left: 0; /* Alineación a la izquierda del li */
+    width: max-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.dropdown li {
+    padding: 10px;
+}
+
+.dropdown li h4 {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1.1em; /* Tamaño de fuente para los subtítulos */
+    color: #333; /* Color del texto */
+}
+
+.dropdown li p {
+    margin: 5px 0 10px; /* Espaciado alrededor de los párrafos */
+    font-size: 0.9em; /* Tamaño de fuente para los párrafos */
+    color: #555; /* Color del texto */
+}
+
+
+.dropdown-img {
+    width: 500px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 10px auto; /* Centramos la imagen */
+    display: block; /* Aseguramos que la imagen se muestre en una nueva línea */
+}
+
+.dropdown a {
+    color: #000000;
+    padding: 5px 15px;
+    white-space: nowrap;
+    display: block;
+    text-decoration: none;
+}
+
+/* Mostrar el menú desplegable en hover */
+.navbar-left li:hover .dropdown,
+.navbar-right li:hover .dropdown {
+    display: block;
+}
+
+
+
+
+
+/* Estilos para el footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 0px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-section {
+    margin: 10px;
+    width: 30%;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Color amarillo */
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* Hace que los iconos sean blancos */
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(2.0);
+}
+
+/* Estilos generales del footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor general del footer */
+.footer-wave-container {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente para el contenedor */
+}
+
+/* La ola para la parte inferior */
+.footer-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%; /* La ola es el doble del tamaño del contenedor */
+    height: 80px;
+    background: rgba(255, 255, 255, 0.4); /* Fondo semi-transparente */
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0% 60%, 100% 0); /* Forma de ola */
+    animation: waveAnimation 6s linear infinite; /* Animación para mover la ola */
+}
+
+/* Animación para la ola */
+@keyframes waveAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Estilo para el contenido del footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Secciones dentro del footer */
+.footer-section {
+    margin: 10px;
+    width: 30%;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.footer-section p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+/* Footer bottom - parte inferior del footer */
+.footer-bottom {
+    background-color: #111;
+    color: #aaa;
+    padding: 10px;
+    font-size: 0.8em;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Para ocultar lo que se sale de los límites */
+}
+
+/* Contenedor de la ola para la parte inferior */
+.footer-bottom-wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+
+/* La ola para la parte inferior */
+.footer-bottom-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%; /* La ola es el doble del tamaño del contenedor */
+    height: 80px;
+    background: rgba(255, 255, 255, 0.4); /* Fondo semi-transparente */
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0% 60%, 100% 0); /* Forma de ola */
+    animation: waveAnimation 6s linear infinite; /* Animación para mover la ola */
+}
+
+/* Responsividad: Ajustar en pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    /* Otros estilos existentes */
+    header {
+        padding: 10px 5px; /* Reduce el padding en móviles */
+    }
+
+    .navbar {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        padding: 10px; /* Reduce el padding */
+        text-align: center; /* Centra el texto dentro del navbar */
+    }
+
+    .navbar-left, .navbar-right {
+        flex-direction: column; /* Cambia la dirección a columna */
+        gap: 10px; /* Reduce el espacio entre los enlaces */
+        width: 100%; /* Asegura que ocupen todo el ancho */
+    }
+
+    .navbar-left a, .navbar-right a {
+        width: 100%; /* Cada enlace ocupa el 100% del ancho disponible */
+        text-align: center; /* Centra el texto de los enlaces */
+    }
+
+    .navbar-center {
+        padding: 15px 10px; /* Reduce el padding */
+        text-align: center; /* Centra el texto */
+    }
+    
+    .video-section {
+        padding: 60px 10px; /* Añadir padding para evitar superposición con el header */
+    }
+
+    .content {
+        padding: 200px 20px; /* Reducir el padding superior para que no se superponga con el header */
+        flex-direction: column; /* Cambiar a columna para mejor distribución en móviles */
+        align-items: center; /* Centra el contenido */
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column; /* Cambia a columna para mejor visualización */
+        align-items: center; /* Centra los elementos de la galería */
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    }
+
+    .gallery-row {
+        display: flex; /* Mantén el display como flex para evitar superposiciones */
+        flex-direction: column; /* Cambia la dirección a columna */
+        width: 100%; /* Asegúrate de que ocupe todo el ancho */
+    }
+
+    .gallery-item {
+        width: 90%; /* Aumentar el ancho para que sea más visible en móviles */
+        margin: 10px auto; /* Usar auto para centrar horizontalmente */
+        display: flex; /* Asegúrate de que el contenido interno esté en flex */
+        flex-direction: column; /* Coloca el contenido en columna */
+        align-items: center; /* Centra el contenido interno */
+    }
+
+    .image-text {
+        font-size: 0.9em; /* Ajusta el tamaño del texto para dispositivos móviles */
+        text-align: center; /* Centra el texto de la imagen */
+    }
+
+    .footer-section {
+        width: 100%; /* Hace que las secciones del footer ocupen el 100% */
+        margin-bottom: 20px; /* Añade espacio entre las secciones */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra las secciones */
+    }
+}
+
+/* Contenedor del carrusel */
+.carousel-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden; /* Oculta las imágenes que no estén visibles */
+}
+
+/* Contenedor de las imágenes */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Carrusel de imágenes */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo para cada imagen */
+.carousel-images img {
+    width: 100%;
+    height: 100vh; /* Ajusta las imágenes para que cubran toda la pantalla */
+    object-fit: cover; /* Hace que la imagen cubra toda el área sin distorsionarse */
+}
+
+/* Estilos de las flechas de navegación */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Estilo del carrusel */
+.carousel-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    overflow: hidden;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100vw;  /* Cada imagen ocupa el 100% del ancho de la pantalla */
+    height: 100vh; /* Cada imagen ocupa el 100% de la altura de la pantalla */
+    object-fit: cover; /* Las imágenes cubren el área sin distorsión */
+}
+
+/* Estilo de las flechas */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+
+
+/* Estilo para la sección del carrusel */
+.carousel-section {
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    height: 100vh; /* La sección ocupa toda la altura de la ventana */
+}
+
+/* Contenedor de las imágenes */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Carrusel de imágenes */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo de cada imagen */
+.carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh; /* Cada imagen ocupa el 100% de la altura de la ventana */
+    object-fit: cover; /* Las imágenes cubren el área sin distorsionarse */
+}
+
+/* Contenedor del texto */
+.text-overlay {
+    position: absolute;
+    bottom: 10%;  /* Colocamos el texto cerca de la parte inferior */
+    left: 0;
+    width: 100%;  /* El cuadro de texto ocupará todo el ancho de la pantalla */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Cuadro de contenido dentro del texto */
+.content {
+    position: relative;
+    display: flex; /* Utiliza flexbox para alinear contenido */
+    justify-content: space-between; /* Espacio entre ambos contenidos */
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    border-radius: 10px;  /* Bordes redondeados */
+    width: 100%;  /* El cuadro se expande dentro de la pantalla, pero no al 100% */
+    margin: 0 auto; /* Centra el cuadro */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+/* Estilo para los títulos dentro del cuadro de contenido */
+.content h2 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Estilo para los párrafos dentro del cuadro de contenido */
+.content p {
+    margin: 10px 0 0;
+    font-size: 23px;
+}
+
+/* Estilo de las flechas de navegación */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+
+
+
+/* Efecto de ola dentro de cada info-box */
+@keyframes waveEffect {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Estilos generales para el contenedor */
+.content {
+    display: flex; /* Utiliza flexbox para alinear las columnas */
+    justify-content: space-between; /* Espacio entre las columnas */
+    padding: 60px;
+    background-color: #222222; /* Fondo oscuro */
+    color: #fff; /* Texto en color blanco para contrastar */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    margin: 20px; /* Margen alrededor del contenedor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas pequeñas */
+}
+
+/* Efecto al pasar el mouse por encima */
+.content:hover {
+    transform: translateY(-5px); /* Eleva ligeramente el contenedor al pasar el ratón */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+/* Estilo para el contenido de la izquierda */
+.left-content {
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    flex-direction: column; /* Alinea los elementos de arriba a abajo */
+    text-align: left; /* Alineación del texto a la izquierda */
+    flex: 1; /* Hace que la columna ocupe el 50% de la pantalla */
+    padding-right: 20px; /* Espacio entre el contenido de la izquierda y la derecha */
+}
+
+/* Estilo de los cuadros de información */
+.info-box {
+    position: relative; /* Necesario para el efecto de la ola */
+    overflow: hidden; /* Ocultar el contenido extra si se desborda */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre cada info-box */
+.info-box:hover {
+    transform: translateY(-5px); /* Mueve ligeramente hacia arriba al pasar el mouse */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Pseudo-elemento para crear la ola */
+.info-box:before {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2); /* Color de la ola (puede ser más opaco o transparente) */
+    background-image: url('path_to_wave_image_or_svg'); /* Imagen o SVG para la ola (opcional) */
+    background-size: contain;
+    animation: waveEffect 4s ease-in-out infinite; /* Animación de la ola */
+}
+
+/* Estilo de la imagen a la izquierda dentro de info-box */
+.left-image {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el título */
+}
+
+/* Estilos de los textos dentro de las columnas */
+.left-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Media queries para mejorar la adaptabilidad en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* En pantallas pequeñas, las columnas se apilan */
+        padding: 30px; /* Reducir el padding */
+    }
+
+    .left-content, .right-content {
+        width: 100%; /* Las columnas ocupan el 100% del ancho */
+        margin-bottom: 20px; /* Espaciado entre las columnas */
+    }
+
+    .left-content {
+        padding-right: 0; /* Elimina el padding derecho para que no haya espacio adicional */
+    }
+}
+
+
+
+
+/* Estilo para el contenido de la izquierda */
+.left-content {
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    flex-direction: column; /* Alinea los elementos de arriba a abajo */
+    text-align: left; /* Alineación del texto a la izquierda */
+    flex: 1; /* Hace que la columna ocupe el 50% de la pantalla */
+}
+
+/* Imagen al lado izquierdo */
+.left-image {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 10px; /* Espacio entre la imagen y el título */
+}
+
+/* Estilo para el contenido de la derecha */
+.right-content {
+    flex: 1; /* La columna de la derecha ocupa el 50% de la pantalla */
+    padding-left: 40px; /* Agrega un poco de espacio entre ambas columnas */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+/* Estilos para los títulos */
+h1 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Estilos para los párrafos */
+p {
+    font-size: 28px;
+    line-height: 1.6;
+}
+
+
+
+.right-content {
+    display: block; /* Asegura que los divs estén en bloque, uno debajo del otro */
+    clear: both;  /* Asegura que el elemento se alinee debajo de los anteriores */
+    margin-bottom: 20px;  /* Añadir espacio entre los bloques */
+}
+
+
+
+
+/* Pseudo-elemento para crear la línea curva dentro del contenedor */
+.content::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Baja un poco más la línea para que quede más hacia abajo */
+    left: 0;
+    width: 100%;
+    height: 40px; /* Altura de la curva */
+    background: #ffffff; /* Color blanco para la línea curva */
+    border-radius: 50% 50% 0 0; /* Borde redondeado en la parte inferior, creando la curva hacia abajo */
+    z-index: -1; /* Asegura que la curva esté detrás del contenido */
+}
+
+
+/* Estilo para el contenedor interno */
+.inner-container {
+    display: flex;
+    flex-wrap: wrap; /* Asegura que los elementos internos se envuelvan cuando sea necesario */
+    gap: 20px; /* Espacio entre las cajas dentro del contenedor */
+    flex: 1; /* Ocupa el espacio disponible */
+    padding: 20px;
+    background-color: #98b614; /* Fondo oscuro para el contenedor interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra más intensa para el contenedor interno */
+}
+
+/* Estilo de los cuadros */
+.info-box {
+    background-color: #421c06;  /* Fondo oscuro */
+    border: 1px solid #000000; /* Borde gris oscuro */
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;  /* Ancho máximo para cada caja */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;  /* Transición suave */
+}
+
+/* Efecto hover para las cajas */
+.info-box:hover {
+    transform: translateY(-5px) rotate(2deg); /* Efecto de elevación y rotación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    background-color: #c7700d; /* Cambio de color de fondo */
+    filter: brightness(1.1); /* Aumenta el brillo */
+}
+
+/* Efecto de foco en las cajas */
+.info-box:focus-within {
+    border-color: #be7910;
+    box-shadow: 0 0 0 4px rgba(138, 26, 7, 0.3); /* Resplandor alrededor */
+}
+
+/* Estilo para los textos dentro de los cuadros */
+.info-box h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Media queries para mejorar la adaptabilidad */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* En pantallas pequeñas, las columnas se apilan */
+        padding: 15px; /* Ajusta el padding */
+    }
+
+    .info-box {
+        max-width: 100%; /* Hace que los cuadros ocupen todo el ancho disponible */
+        margin-bottom: 15px; /* Ajusta el espaciado */
+    }
+}
+
+/* Efecto de zoom 3D al pasar el cursor */
+.info-box:hover {
+    transform: scale(1.05) translateY(-10px) translateX(5px);  /* Efecto de aumento + desplazamiento */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada y difusa */
+    filter: brightness(1.1);  /* Aumenta ligeramente el brillo para darle más "vibrante" */
+}
+
+/* Estilo para los encabezados dentro de los cuadros */
+.info-box h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las imágenes dentro de los cuadros */
+.info-box img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el texto dentro de los cuadros */
+.info-box p {
+    font-size: 16px;
+    margin: 0;
+    color: #333333;
+}
+
+/* Asegurando que las imágenes en el contenedor .content se alineen bien */
+.left-image {
+    margin-right: 10px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;  /* Apilar las cajas verticalmente en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .info-box {
+        max-width: 100%;  /* Las cajas ocupan el 100% del ancho disponible en móviles */
+        margin-bottom: 15px;
+    }
+
+    .info-box:hover {
+        transform: scale(1.02) translateY(-5px);  /* Un zoom más pequeño y desplazamiento más sutil en móviles */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);  /* Sombra más ligera */
+    }
+}
+/* Pseudo-elemento para crear el contenedor de la ola semi-transparente */
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0; /* La ola está en la parte superior del contenedor */
+    left: 0;
+    width: 100%;
+    height: 450px; /* Aumenta la altura de la ola para cubrir más espacio */
+    background: rgb(18, 19, 15); /* Color oscuro para la ola */
+    border-radius: 0 0 50% 50%; /* Bordes redondeados en la parte inferior para simular una ola hacia abajo */
+    z-index: -1; /* Asegura que la ola quede detrás del contenido */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para dar la sensación de profundidad */
+    animation: waveAnimation 4s ease-in-out infinite; /* Movimiento continuo de la ola */
+}
+
+/* Animación de la ola para movimiento constante */
+@keyframes waveAnimation {
+    0% {
+        transform: translateY(0); /* Empieza en la posición original */
+    }
+    50% {
+        transform: translateY(25px); /* Hace que la ola baje mucho más */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pseudo-elemento para crear el contenedor de la ola semi-transparente */
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0; /* La ola está en la parte superior del contenedor */
+    left: 0;
+    width: 100%;
+    height: 450px; /* Aumenta la altura de la ola para cubrir más espacio */
+    background: rgb(18, 19, 15); /* Color oscuro para la ola */
+    border-radius: 0 0 50% 50%; /* Bordes redondeados en la parte inferior para simular una ola hacia abajo */
+    z-index: -6; /* Asegura que la ola quede detrás del contenido */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para dar la sensación de profundidad */
+    animation: waveAnimation 4s ease-in-out infinite; /* Movimiento continuo de la ola */
+    margin-bottom: 20px; /* Simula el padding en la parte inferior para separar la ola del contenido */
+}
+
+
+/* Animación de la ola para movimiento constante */
+@keyframes waveAnimation {
+    0% {
+        transform: translateY(0); /* Empieza en la posición original */
+    }
+    50% {
+        transform: translateY(25px); /* Hace que la ola baje mucho más */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a su posición original */
+    }
+}
+
+/* Efecto de ola dentro de cada info-box */
+@keyframes waveEffect {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Estilos generales para el contenedor */
+.content {
+    display: flex; /* Utiliza flexbox para alinear las columnas */
+    justify-content: space-between; /* Espacio entre las columnas */
+    padding: 60px;
+    background-color: #222222; /* Fondo oscuro */
+    color: #fff; /* Texto en color blanco para contrastar */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    margin: 20px; /* Margen alrededor del contenedor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas pequeñas */
+    position: relative; /* Necesario para que los pseudo-elementos funcionen */
+}
+
+/* Efecto al pasar el mouse por encima */
+.content:hover {
+    transform: translateY(-5px); /* Eleva ligeramente el contenedor al pasar el ratón */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+/* Estilo para el contenido de la izquierda */
+.left-content {
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    flex-direction: column; /* Alinea los elementos de arriba a abajo */
+    text-align: left; /* Alineación del texto a la izquierda */
+    flex: 1; /* Hace que la columna ocupe el 50% de la pantalla */
+    padding-right: 20px; /* Espacio entre el contenido de la izquierda y la derecha */
+}
+
+/* Estilo de los cuadros de información */
+.info-box {
+    position: relative; /* Necesario para el efecto de la ola */
+    overflow: hidden; /* Ocultar el contenido extra si se desborda */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre cada info-box */
+.info-box:hover {
+    transform: translateY(-5px); /* Mueve ligeramente hacia arriba al pasar el mouse */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Pseudo-elemento para crear la ola */
+.info-box:before {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2); /* Color de la ola (puede ser más opaco o transparente) */
+    background-image: url('path_to_wave_image_or_svg'); /* Imagen o SVG para la ola (opcional) */
+    background-size: contain;
+    animation: waveEffect 4s ease-in-out infinite; /* Animación de la ola */
+}
+
+/* Estilo de la imagen a la izquierda dentro de info-box */
+.left-image {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el título */
+}
+
+/* Estilos de los textos dentro de las columnas */
+.left-content h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Media queries para mejorar la adaptabilidad en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* En pantallas pequeñas, las columnas se apilan */
+        padding: 30px; /* Reducir el padding */
+    }
+
+    .left-content, .right-content {
+        width: 100%; /* Las columnas ocupan el 100% del ancho */
+        margin-bottom: 20px; /* Espaciado entre las columnas */
+    }
+
+    .left-content {
+        padding-right: 0; /* Elimina el padding derecho para que no haya espacio adicional */
+    }
+}
+
+/* Estilo para el contenedor interno */
+.inner-container {
+    display: flex;
+    flex-wrap: wrap; /* Asegura que los elementos internos se envuelvan cuando sea necesario */
+    gap: 20px; /* Espacio entre las cajas dentro del contenedor */
+    flex: 1; /* Ocupa el espacio disponible */
+    padding: 20px;
+    background-color: #98b614; /* Fondo oscuro para el contenedor interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra más intensa para el contenedor interno */
+}
+
+
+
+/* Media queries para mejorar la adaptabilidad */
+
+
+
+
+
+
+
+
+
+
+/* Restablecer los márgenes y el padding globalmente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuración de la fuente */
+body {
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+
+
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .overlay h2 {
+        font-size: 20px;
+    }
+
+    .overlay p {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .social-icon {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* Estilos para pantallas medianas */
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos comunes para escritorio (si ya están configurados, no hace falta cambiarlos) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Optimización para dispositivos con pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+    /* Ajustes para imágenes */
+    img {
+      max-width: 100%; /* Hace que las imágenes no desborden */
+      height: auto; /* Mantiene la proporción de las imágenes */
+    }
+  
+    /* Contenedores */
+    .container {
+      width: 100%; /* Asegura que los contenedores ocupen todo el ancho */
+      padding: 10px; /* Agrega espacio alrededor del contenido */
+    }
+  
+    /* Ajuste de los elementos de texto */
+    h1, h2, h3, p {
+      font-size: 1.2em; /* Aumenta ligeramente el tamaño de fuente para visibilidad */
+      line-height: 1.4; /* Mejora la legibilidad */
+    }
+  
+    /* Navegación */
+    .nav {
+      display: flex;
+      flex-direction: column; /* Cambia la navegación horizontal a vertical */
+      align-items: center;
+    }
+    
+    .nav a {
+      padding: 10px 0;
+      text-align: center;
+      font-size: 1.1em;
+    }
+  
+    /* Ajustes para botones */
+    .btn {
+      padding: 12px 20px;
+      font-size: 1em;
+      width: 100%; /* Hace que los botones ocupen todo el ancho del contenedor */
+      margin-bottom: 15px;
+    }
+  
+    /* Reducción de márgenes en dispositivos móviles */
+    .section {
+      margin: 0;
+      padding: 20px 0;
+    }
+  
+    /* Evitar el desbordamiento en pequeños tamaños */
+    .content {
+      overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    }
+  }
+  
+  /* Para dispositivos aún más pequeños (por ejemplo, teléfonos muy pequeños) */
+  @media screen and (max-width: 480px) {
+    /* Reducir tamaños de fuente aún más si es necesario */
+    h1 {
+      font-size: 1.5em;
+    }
+  
+    h2 {
+      font-size: 1.3em;
+    }
+  
+    /* Ajustes en márgenes */
+    .container {
+      padding: 8px; /* Reducir el padding */
+    }
+  
+    .nav a {
+      font-size: 1em; /* Hacer las letras más pequeñas */
+    }
+  
+    .btn {
+      padding: 10px 18px;
+      font-size: 0.9em;
+    }
+  }
+  
+
+
+
+
+/* Estilo base para el header */
+header {
+    background-color: #1b6b75; /* Color de fondo elegante */
+    color: white;
+    padding: 20px 20px; /* Padding para dar espacio interno */
+    display: flex;
+    justify-content: space-between; /* Separar logo y navegación */
+    align-items: center;
+    transition: padding 0.3s ease; /* Transición para que el cambio sea suave */
+  }
+  
+  /* Logo en el header */
+  header .logo img {
+    max-height: 40px; /* Ajustar el tamaño del logo */
+  }
+  
+  /* Estilo para la navegación */
+  header nav {
+    display: flex;
+    gap: 10px; /* Espaciado entre los enlaces de navegación */
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 8px 10px;
+    transition: background-color 0.3s; /* Transición para el hover */
+  }
+  
+  header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto al pasar el ratón */
+  }
+  
+  /* Ajustes para móviles y tabletas */
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 15px 20px; /* Reducir el padding en móviles */
+      flex-direction: column; /* Cambiar a columna para más espacio */
+      align-items: flex-start; /* Alineación de izquierda */
+    }
+  
+    /* Logo */
+    header .logo img {
+      max-height: 40px; /* Reducir tamaño del logo */
+    }
+  
+    /* Navegación */
+    header nav {
+      display: block; /* Cambiar la navegación a bloque */
+      width: 100%; /* Navegación en bloque ocupando todo el ancho */
+      margin-top: 15px; /* Espacio encima de la navegación */
+    }
+  
+    header nav a {
+      display: block; /* Hacer los enlaces en bloque */
+      text-align: center; /* Centrar los enlaces */
+      font-size: 1.1em; /* Reducir el tamaño de la fuente */
+      padding: 10px 0; /* Espacio alrededor de cada enlace */
+    }
+  
+    /* Añadir un menú hamburguesa (opcional) */
+    .hamburger {
+      display: block;
+      background-color: white;
+      width: 30px;
+      height: 3px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .hamburger:before,
+    .hamburger:after {
+      content: "";
+      background-color: white;
+      width: 30px;
+      height: 3px;
+      position: absolute;
+      transition: transform 0.3s ease;
+    }
+  
+    .hamburger:before {
+      top: -8px;
+    }
+  
+    .hamburger:after {
+      top: 8px;
+    }
+  
+    /* Menú hamburguesa abierto */
+    .hamburger.open:before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+  
+    .hamburger.open:after {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+  
+    .hamburger.open {
+      transform: rotate(90deg);
+    }
+  
+    /* Contenedor del menú móvil */
+    .mobile-menu {
+      display: none;
+      width: 100%;
+      background-color: #333;
+    }
+  
+    .mobile-menu.open {
+      display: block;
+    }
+  
+    .mobile-menu a {
+      padding: 15px;
+      font-size: 1.2em;
+      text-align: center;
+    }
+  }
+  
+  /* Para pantallas aún más pequeñas */
+  @media screen and (max-width: 480px) {
+    header {
+      padding: 10px 15px; /* Reducir aún más el padding */
+    }
+  
+    header .logo img {
+      max-height: 35px; /* Logo aún más pequeño */
+    }
+  
+    header nav a {
+      font-size: 1em; /* Reducir el tamaño de los enlaces */
+      padding: 8px 0; /* Menos espacio entre enlaces */
+    }
+  }
+  
