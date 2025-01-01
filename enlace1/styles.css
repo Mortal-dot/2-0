@@ -460,6 +460,7 @@ footer {
     width: 100%;
     height: 100vh; /* Ocupa toda la altura de la pantalla */
     overflow: hidden; /* Oculta las imágenes que no están visibles */
+    background-color: #f0f0f0; /* Fondo del contenedor principal */
 }
 
 /* Contenedor de las imágenes */
@@ -467,6 +468,16 @@ footer {
     display: flex; /* Para alinear las imágenes horizontalmente */
     width: 100%; /* Asegura que el contenedor ocupe todo el espacio */
     height: 100%;
+    justify-content: center; /* Opcional, si quieres centrar el contenedor */
+    background-color: #000; /* Fondo negro detrás de las imágenes */
+}
+
+/* Contenedor adicional para las imágenes */
+.carousel-images-wrapper {
+    width: 100%; /* Asegura que ocupe el 100% del ancho del contenedor */
+    height: 100%; /* Asegura que ocupe el 100% de la altura del contenedor */
+    position: relative;
+    overflow: hidden; /* Asegura que las imágenes no se desborden */
 }
 
 /* Carrusel de imágenes */
@@ -475,19 +486,31 @@ footer {
     transition: transform 0.5s ease-in-out; /* Transición suave para mover las imágenes */
 }
 
+/* Contenedor individual de cada imagen */
+.image-container {
+    position: relative;
+    width: 100vw; /* Cada imagen ocupa todo el ancho de la pantalla en pantallas grandes */
+    height: 100vh; /* Las imágenes cubren toda la altura de la pantalla */
+    overflow: hidden; /* Evita que la imagen se salga del contenedor */
+    box-sizing: border-box; /* Asegura que los bordes estén dentro del tamaño */
+    border: 10px solid #fff; /* Agrega un borde blanco de 10px alrededor de cada imagen */
+    background-color: #000; /* Fondo negro detrás de cada imagen */
+}
+
 /* Estilo para cada imagen */
 .carousel-images img {
-    width: 100vw; /* Cada imagen ocupa todo el ancho de la pantalla */
-    height: 100vh; /* Las imágenes cubren toda la altura de la pantalla */
-    object-fit: cover; /* Asegura que la imagen se recorte correctamente sin distorsionarse */
+    width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+    height: 100%; /* Las imágenes ocupan todo el contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    display: block; /* Elimina el espacio debajo de las imágenes */
 }
 
 /* Ajustes para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     .carousel-images img {
         width: 100%; /* Las imágenes ocupan el 100% del contenedor */
-        height: auto; /* Ajuste automático de la altura para mantener la proporción */
-        object-fit: contain; /* Asegura que la imagen se muestre completamente sin recorte */
+        height: auto; /* Ajuste automático de la altura según la proporción de la imagen */
+        object-fit: contain; /* Asegura que la imagen no se recorte y se ajusta dentro del contenedor */
     }
 }
 
@@ -495,11 +518,10 @@ footer {
 @media (max-width: 480px) {
     .carousel-images img {
         width: 100%; /* Mantener el 100% del ancho */
-        height: auto; /* Mantener la proporción de la imagen */
-        object-fit: contain; /* Ajustar la imagen sin recorte */
+        height: auto; /* Mantener la proporción */
+        object-fit: contain; /* Ajustar sin recortar */
     }
 }
-
 
 /* Estilos de las flechas de navegación */
 button {
