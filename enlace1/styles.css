@@ -462,14 +462,6 @@ footer {
     overflow: hidden; /* Oculta las imágenes que no están visibles */
 }
 
-/* Contenedor principal del carrusel */
-.carousel-section {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    overflow: hidden; /* Oculta las imágenes que no están visibles */
-}
-
 /* Contenedor de las imágenes */
 .carousel-container {
     display: flex; /* Para alinear las imágenes horizontalmente */
@@ -485,7 +477,7 @@ footer {
 
 /* Estilo para cada imagen */
 .carousel-images img {
-    width: 100vw; /* Cada imagen ocupa todo el ancho de la pantalla en pantallas grandes */
+    width: 100vw; /* Cada imagen ocupa todo el ancho de la pantalla */
     height: 100vh; /* Las imágenes cubren toda la altura de la pantalla */
     object-fit: cover; /* Asegura que la imagen se recorte correctamente sin distorsionarse */
 }
@@ -493,9 +485,9 @@ footer {
 /* Ajustes para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     .carousel-images img {
-        width: 100%; /* Las imágenes ocupan el 100% del contenedor, sin exceder */
-        height: auto; /* Ajuste automático de la altura según la proporción de la imagen */
-        object-fit: contain; /* Asegura que la imagen no se recorte y se ajusta dentro del contenedor */
+        width: 100%; /* Las imágenes ocupan el 100% del contenedor */
+        height: auto; /* Ajuste automático de la altura para mantener la proporción */
+        object-fit: contain; /* Asegura que la imagen se muestre completamente sin recorte */
     }
 }
 
@@ -503,10 +495,11 @@ footer {
 @media (max-width: 480px) {
     .carousel-images img {
         width: 100%; /* Mantener el 100% del ancho */
-        height: auto; /* Mantener la proporción */
-        object-fit: contain; /* Ajustar sin recortar */
+        height: auto; /* Mantener la proporción de la imagen */
+        object-fit: contain; /* Ajustar la imagen sin recorte */
     }
 }
+
 
 /* Estilos de las flechas de navegación */
 button {
