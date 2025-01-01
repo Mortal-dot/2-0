@@ -746,14 +746,21 @@ img.img-fluid {
     font-size: 1.5rem; /* Tamaño de la fuente ajustado */
     font-weight: bold; /* Peso de la fuente */
     text-shadow: 
-        2px 2px 5px rgba(0, 0, 0, 0.8),  /* Sombra para dar profundidad */
-        -1px -1px 5px rgba(0, 0, 0, 0.8); /* Sombra inversa */
+        2px 2px 8px rgba(0, 0, 0, 0.8),  /* Sombra oscura para dar profundidad */
+        -1px -1px 10px rgba(255, 255, 255, 0.7), /* Sombra brillante blanca */
+        0 0 15px rgba(255, 0, 255, 1), /* Brillo adicional en rosa */
+        0 0 20px rgba(0, 255, 255, 1); /* Brillo en cian */
     background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Gradiente arcoíris */
     -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
     background-clip: text; /* Asegura que el fondo solo cubra el texto */
     color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+/* Para activar el overlay y mostrar el contenido */
+.overlay.active {
+    opacity: 1;
 }
 
 /* Para activar el overlay y mostrar el contenido */
