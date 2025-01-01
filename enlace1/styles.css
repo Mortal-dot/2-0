@@ -477,27 +477,9 @@ footer {
 
 /* Estilo para cada imagen */
 .carousel-images img {
-    width: 100vw; /* Cada imagen ocupa todo el ancho de la pantalla en pantallas grandes */
+    width: 100vw; /* Cada imagen ocupa todo el ancho de la pantalla */
     height: 100vh; /* Las imágenes cubren toda la altura de la pantalla */
     object-fit: cover; /* Asegura que la imagen se recorte correctamente sin distorsionarse */
-}
-
-/* Ajustes para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    .carousel-images img {
-        width: 100%; /* Las imágenes ocupan el 100% del contenedor, sin exceder */
-        height: auto; /* Ajuste automático de la altura según la proporción de la imagen */
-        object-fit: contain; /* Asegura que la imagen no se recorte y se ajusta dentro del contenedor */
-    }
-}
-
-/* Ajustes para pantallas muy pequeñas (dispositivos con pantallas más pequeñas) */
-@media (max-width: 480px) {
-    .carousel-images img {
-        width: 100%; /* Mantener el 100% del ancho */
-        height: auto; /* Mantener la proporción */
-        object-fit: contain; /* Ajustar sin recortar */
-    }
 }
 
 /* Estilos de las flechas de navegación */
