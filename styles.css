@@ -736,28 +736,33 @@ img.img-fluid {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3); /* Fondo más transparente para que el texto resalte más */
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s;
     font-family: 'Arial', sans-serif; /* Fuente personalizada */
-    font-size: 1.5rem; /* Tamaño de la fuente ajustado */
+    font-size: 1.5rem; /* Mantén el tamaño de la fuente como estaba */
     font-weight: bold; /* Peso de la fuente */
     text-shadow: 
-        2px 2px 8px rgba(0, 0, 0, 0.8),  /* Sombra oscura para dar profundidad */
-        -1px -1px 10px rgba(255, 255, 255, 0.7), /* Sombra brillante blanca */
-        0 0 15px rgba(255, 0, 255, 1), /* Brillo adicional en rosa */
-        0 0 20px rgba(0, 255, 255, 1); /* Brillo en cian */
+        0 0 15px rgba(255, 255, 255, 0.9), /* Sombra brillante blanca más fuerte */
+        0 0 25px rgba(255, 0, 255, 1),    /* Brillo rosa más fuerte */
+        0 0 35px rgba(0, 255, 255, 1),    /* Brillo cian más fuerte */
+        0 0 50px rgba(255, 165, 0, 1),    /* Brillo naranja más fuerte */
+        0 0 60px rgba(255, 255, 0, 1);    /* Brillo amarillo más fuerte */
     background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Gradiente arcoíris */
     -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
     background-clip: text; /* Asegura que el fondo solo cubra el texto */
     color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    letter-spacing: 1px; /* Espaciado entre letras */
+    letter-spacing: 1px; /* Mantén el espaciado entre letras para legibilidad */
 }
 
+/* Para activar el overlay y mostrar el contenido */
+.overlay.active {
+    opacity: 1;
+}
 /* Para activar el overlay y mostrar el contenido */
 .overlay.active {
     opacity: 1;
