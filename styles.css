@@ -737,14 +737,29 @@ img.img-fluid {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s;
+    font-family: 'Arial', sans-serif; /* Fuente personalizada */
+    font-size: 1.5rem; /* Tamaño de la fuente ajustado */
+    font-weight: bold; /* Peso de la fuente */
+    text-shadow: 
+        2px 2px 5px rgba(0, 0, 0, 0.8),  /* Sombra para dar profundidad */
+        -1px -1px 5px rgba(0, 0, 0, 0.8); /* Sombra inversa */
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Gradiente arcoíris */
+    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
+    background-clip: text; /* Asegura que el fondo solo cubra el texto */
+    color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
+/* Para activar el overlay y mostrar el contenido */
+.overlay.active {
+    opacity: 1;
+}
 .gallery-item:hover .overlay {
     opacity: 1;
 }
