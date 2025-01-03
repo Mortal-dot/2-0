@@ -749,6 +749,7 @@ img.img-fluid {
     }
 }
 
+
 .overlay {
     position: absolute;
     top: 0;
@@ -760,43 +761,30 @@ img.img-fluid {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Transición suave */
+    transition: opacity 0.3s;
     font-family: 'Arial', sans-serif; /* Fuente personalizada */
     font-size: 1.5rem; /* Mantén el tamaño de la fuente como estaba */
     font-weight: bold; /* Peso de la fuente */
     text-shadow: 
-        0 0 20px rgba(255, 255, 255, 1),   /* Sombra brillante blanca moderada */
-        0 0 40px rgba(255, 0, 255, 1),     /* Brillo rosa fuerte */
-        0 0 60px rgba(0, 255, 255, 1),     /* Brillo cian intenso */
-        0 0 80px rgba(255, 165, 0, 1),     /* Brillo naranja fuerte */
-        0 0 100px rgba(255, 255, 0, 1),    /* Brillo amarillo */
-        0 0 120px rgba(255, 105, 180, 1),  /* Brillo rosa adicional */
-        0 0 140px rgba(0, 255, 0, 1);      /* Brillo verde brillante */
-    background-image: linear-gradient(to right, #FF4500, #FFD700, #32CD32, #1E90FF, #8A2BE2, #FF1493, #00FFFF, #FF00FF, #FF8C00, #FF6347, #ADFF2F); /* Gradiente aún más brillante con más colores */
+        0 0 50px rgba(255, 255, 255, 1),   /* Sombra brillante blanca aún más intensa */
+        0 0 60px rgba(255, 0, 255, 1),     /* Brillo rosa mucho más fuerte */
+        0 0 100px rgba(0, 255, 255, 1),    /* Brillo cian más fuerte */
+        0 0 150px rgba(255, 165, 0, 1),    /* Brillo naranja aún más fuerte */
+        0 0 200px rgba(255, 255, 0, 1),    /* Brillo amarillo más intenso */
+        0 0 250px rgba(255, 105, 180, 1),  /* Brillo rosa fuerte adicional */
+        0 0 300px rgba(0, 255, 0, 1);      /* Brillo verde brillante adicional */
+    background-image: linear-gradient(to right, #FF4500, #FFD700, #32CD32, #1E90FF, #8A2BE2, #FF1493, #00FFFF, #FF00FF, #FF8C00); /* Gradiente más largo y brillante */
+    -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
+    background-clip: text; /* Asegura que el fondo solo cubra el texto */
     color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     letter-spacing: 1px; /* Mantén el espaciado entre letras para legibilidad */
-    animation: glowingButton 1.5s ease-in-out infinite alternate; /* Animación de brillo más suave */
+    animation: glowingButton 1.5s ease-in-out infinite; /* Aplica la animación de brillo al overlay */
 }
 
 /* Para activar el overlay y mostrar el contenido */
 .overlay.active {
     opacity: 1;
-}
-
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-    .overlay {
-        font-size: 1.2rem; /* Reducir el tamaño de la fuente en móviles */
-        text-shadow: 
-            0 0 10px rgba(255, 255, 255, 1),   /* Reducir la intensidad de las sombras */
-            0 0 20px rgba(255, 0, 255, 1),     /* Sombra rosa menos intensa */
-            0 0 30px rgba(0, 255, 255, 1),     /* Sombra cian más pequeña */
-            0 0 40px rgba(255, 165, 0, 1),     /* Sombra naranja más moderada */
-            0 0 50px rgba(255, 255, 0, 1),     /* Sombra amarilla más pequeña */
-            0 0 60px rgba(255, 105, 180, 1),   /* Sombra rosa más pequeña */
-            0 0 70px rgba(0, 255, 0, 1);       /* Sombra verde más pequeña */
-    }
 }
 
 
