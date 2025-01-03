@@ -750,6 +750,8 @@ img.img-fluid {
 }
 
 
+
+
 .overlay {
     position: absolute;
     top: 0;
@@ -786,7 +788,6 @@ img.img-fluid {
 .overlay.active {
     opacity: 1;
 }
-
 
 
 
