@@ -730,6 +730,9 @@ img.img-fluid {
     margin-bottom: 20px;
 }
 
+
+
+
 .overlay {
     position: absolute;
     top: 0;
@@ -741,31 +744,38 @@ img.img-fluid {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease-in-out; /* Transición suave */
     font-family: 'Arial', sans-serif; /* Fuente personalizada */
     font-size: 1.5rem; /* Mantén el tamaño de la fuente como estaba */
     font-weight: bold; /* Peso de la fuente */
     text-shadow: 
-        0 0 20px rgba(255, 255, 255, 1),   /* Sombra brillante blanca más fuerte */
-        0 0 30px rgba(255, 0, 255, 1),     /* Brillo rosa más fuerte */
-        0 0 40px rgba(0, 255, 255, 1),     /* Brillo cian más fuerte */
-        0 0 60px rgba(255, 165, 0, 1),     /* Brillo naranja más fuerte */
-        0 0 80px rgba(255, 255, 0, 1);     /* Brillo amarillo más fuerte */
-    background-image: linear-gradient(to right, #FF4500, #FFD700, #32CD32, #1E90FF, #8A2BE2, #FF1493); /* Colores más brillantes */
+        0 0 50px rgba(255, 255, 255, 1),   /* Sombra brillante blanca aún más intensa */
+        0 0 100px rgba(255, 0, 255, 1),     /* Brillo rosa extremadamente fuerte */
+        0 0 150px rgba(0, 255, 255, 1),     /* Brillo cian mucho más fuerte */
+        0 0 200px rgba(255, 165, 0, 1),     /* Brillo naranja potente */
+        0 0 250px rgba(255, 255, 0, 1),     /* Brillo amarillo extremadamente fuerte */
+        0 0 300px rgba(255, 105, 180, 1),   /* Brillo rosa intenso adicional */
+        0 0 350px rgba(0, 255, 0, 1),       /* Brillo verde brillante extremadamente fuerte */
+        0 0 400px rgba(255, 20, 147, 1),    /* Sombra extra fuerte de rosa intenso */
+        0 0 500px rgba(255, 0, 0, 1),       /* Rojo brillante para dar un toque de intensidad extra */
+        0 0 600px rgba(138, 43, 226, 1);    /* Púrpura intenso para añadir más variedad */
+    background-image: linear-gradient(to right, #FF4500, #FFD700, #32CD32, #1E90FF, #8A2BE2, #FF1493, #00FFFF, #FF00FF, #FF8C00, #FF6347, #ADFF2F, #8A2BE2); /* Gradiente aún más brillante con más colores */
     -webkit-background-clip: text; /* Aplica el gradiente solo al texto */
     background-clip: text; /* Asegura que el fondo solo cubra el texto */
     color: transparent; /* Hace que el texto sea transparente para mostrar el gradiente */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     letter-spacing: 1px; /* Mantén el espaciado entre letras para legibilidad */
+    animation: glowingButton 1.5s ease-in-out infinite alternate; /* Animación de brillo más suave */
 }
 
 /* Para activar el overlay y mostrar el contenido */
 .overlay.active {
     opacity: 1;
 }
-.gallery-item:hover .overlay {
-    opacity: 1;
-}
+
+
+
+
 
 /* Hacer los iconos sociales flotantes y responsivos */
 .social-icons {
